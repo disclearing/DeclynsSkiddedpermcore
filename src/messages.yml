@@ -1,0 +1,234 @@
+########################################################################
+#If a message is showing null in-game, you may want to reset this file.#
+########################################################################
+
+server-name: "Dev"
+
+join-message:
+  - "&7&m--------------------------------------------------"
+  - "&7Welcome, &e%player%&7."
+  - ""
+  - "&7You can customise this message in the messages config."
+  - "&7&m--------------------------------------------------"
+
+true: "&atrue"
+false: "&cfalse"
+
+rank:
+  created:
+    usage: "&cUsage: /rank create <rank>"
+    message: "&7Created rank &e%rank%&7."
+  deleted:
+    usage: "&cUsage: /rank delete <rank>"
+    message: "&7Deleted rank &e%rank%&7."
+  permission:
+    added:
+      usage: "&cUsage: /rank addpermission <rank> <permission>"
+      error: "&cRank %rank% already has permission %permission%."
+      message: "&7Added permission &e%permission% &7to rank &e%rank%&7."
+    deleted:
+      usage: "&cUsage: /rank deletepermission <rank> <permission>"
+      error: "&cRank %rank% doesn't have permission %permission%."
+      message: "&7Deleted permission &e%permission% &7from rank &e%rank%&7."
+  prefix:
+    usage: "&cUsage: /rank setprefix <rank> <prefix...>"
+    message: "&7Set rank &e%rank%&7's prefix to &e%prefix%&7."
+  color:
+    usage: "&cUsage: /rank setcolor <rank> <colorCode>"
+    message: "&7Set rank &e%rank%&7's color to &e%color%&7."
+  weight:
+    usage: "&cUsage: /rank setweight <rank> <weight>"
+    message: "&7Set rank &e%rank%&7's weight to &e%weight%&7."
+  default:
+    usage: "&cUsage: /rank setdefault <rank>"
+    message: "&7Set rank &e%rank% &7to the default rank."
+  help:
+    - "&7&m--------------------------------------------------"
+    - "&e&lRank Help"
+    - ""
+    - "&e/rank create <rank> &7- &fCreate a rank."
+    - "&e/rank delete <rank> &7- &fDelete a rank."
+    - "&e/rank addpermission <rank> <permission> &7- &fAdd a permission to a rank."
+    - "&e/rank deletepermission <rank> <permission> &7- &fDelete a permission from a rank."
+    - "&e/rank setprefix <rank> <prefix...> &7- &fSet a rank's prefix."
+    - "&e/rank setcolor <rank> <colorCode> &7- &fSet a rank's color."
+    - "&e/rank setweight <rank> <weight> &7- &fSet a rank's weight."
+    - "&e/rank setdefault <rank> &7- &fSet the default rank."
+    - "&e/rank info <rank> &7- &fView a rank's information."
+    - "&e/rank list &7- &fView the rank list."
+    - "&7&m--------------------------------------------------"
+  list:
+    usage: "&cUsage: /rank list"
+    header:
+      - "&7&m--------------------------------------------------"
+      - "&e&lRank List"
+      - ""
+    format: "%rank%"
+    footer: "&7&m--------------------------------------------------"
+    hover: "&ePrefix&7: &f%prefix% \n&eWeight&7: &f%weight%"
+  info:
+    usage: "&cUsage: /rank info <rank>"
+    message:
+      - "&7&m--------------------------------------------------"
+      - "&e%rank% &7Information"
+      - ""
+      - "&ePrefix&7: &f%prefix%"
+      - "&eWeight&7: &f%weight%"
+      - "&eInherits&7: &f%inherits%"
+      - "&ePermissions&7: &f%permissions%"
+      - "&7&m--------------------------------------------------"
+
+user:
+  setrank:
+    usage: "&cUsage: /user setrank <player> <rank>"
+    message: "&7Set &e%player%&7's rank to &e%rank%&7."
+  help:
+    - "&7&m--------------------------------------------------"
+    - "&e&lUser Help"
+    - ""
+    - "&e/user setrank <player> <rank> &7- &fSet a user's rank."
+    - "&e/user info <player> &7- &fView a user's information."
+    - "&7&m--------------------------------------------------"
+  info:
+    usage: "&cUsage: /user info <player>"
+    message:
+      - "&7&m--------------------------------------------------"
+      - "&e%player%&7's Information"
+      - ""
+      - "&eRank&7: &f%rank%"
+      - "&7&m--------------------------------------------------"
+
+list:
+  seperator: "&7, "
+  message:
+    - "&7&m--------------------------------------------------"
+    - "%ranks%"
+    - ""
+    - "&7(%online%/%maxplayers%):&f %players%"
+    - "&7&m--------------------------------------------------"
+
+staffchat:
+  usage: "&cUsage: /staffchat [message...]"
+  message: "&e[SC] &7[%server%] &e%player%&7: &f%message%"
+  message-toggle: "&7Set &e%player%&7's staffchat to &e%boolean%&7."
+
+staff-connections:
+  connect: "&e[Staff] &e%player% &7has connected to &e%server%&7."
+  disconnect: "&e[Staff] &e%player% &7has disconnected from &e%server%&7."
+
+request:
+  usage: "&cUsage: /request <message...>"
+  cooldown: "&cYou can only request staff assistance once every %seconds% seconds."
+  message: "&e[Request] &e%player% &7has requested assistance: &f%message%"
+
+report:
+  usage: "&cUsage: /report <player> <message...>"
+  cooldown: "&cYou can only report a player once every %seconds% seconds."
+  message: "&e[Report] &e%player% &7has reported &e%reported% &7for: &f%message%"
+
+gamemode:
+  usage: "&cUsage: /gamemode <mode> [player]"
+  errors:
+    gamemode-provided: "&cInvalid gamemode provided."
+    already-gamemode: "&c%player%'s gamemode is already %mode%."
+  message: "&7Set &e%player%&7's gamemode to &e%mode%&7."
+  message-target: "&e%player% &7set your gamemode to &e%mode%&7."
+  display-names:
+    creative: "&aCreative"
+    survival: "&eSurvival"
+    adventure: "&bAdventure"
+
+fly:
+  usage: "&cUsage: /fly [player]"
+  message: "&7Set &e%player%&7's flight to &e%boolean%&7."
+  message-target: "&e%player% &7set your flight to &e%boolean%&7."
+
+vanish:
+  usage: "&cUsage: /vanish [player]"
+  message: "&7Set &e%player%&7's vanish to &e%boolean%&7."
+  message-target: "&e%player% &7set your vanish to &e%boolean%&7."
+
+message:
+  usage: "&cUsage: /message <player> <message...>"
+  error: "&cYou cannot message yourself."
+  message-to: "&7(To &e%player%&7): &f%message%"
+  message-from: "&7(From &e%player%&7): &f%message%"
+  reply:
+    usage: "&cUsage: /reply <message...>"
+    error: "&cYou do not have anyone to reply to."
+
+setslots:
+  usage: "&cUsage: /setslots <maximumSlots>"
+  message: "&7Updated the max slot count to &e%slots%&7."
+
+ping:
+  usage: "&cUsage: /ping [player]"
+  message: "&7Ping of &e%player%&7: &f%ping%"
+
+alert:
+  usage: "&cUsage: /alert <local/global> <message...>"
+  error: "&cYou must specify local or global."
+  message: "&e[Alert] &f%message%"
+
+teleport:
+  usage: "&cUsage: /tp <player> [target] || [player] <x> <y> <z>"
+  message: "&7Teleporting &e%player% &7to &e%target%&7."
+  message-location: "&7Teleporting &e%player% &7to (X: &f%x%&7, Y: &f%y%&7, Z: &f%z%&7)"
+
+teleport-here:
+  usage: "&cUsage: /tphere <player>"
+  message: "&7Teleported &e%player% &7to you."
+  message-target: "&e%player% &7teleported you to them."
+
+clear-inventory:
+  usage: "&cUsage: /clearinv <player>"
+  message: "&7Cleared &e%player%&7's inventory."
+
+freeze:
+  usage: "&cUsage: /freeze <player>"
+  message: "&7Set &e%player%&7's freeze to &e%boolean%&7."
+  message-target:
+    - "&7&m-------------------------------------------------------"
+    - "&7You have been frozen."
+    - ""
+    - "&7Please connect to our teamspeak server at &ecustomisablemessage.com"
+    - "&7&m-------------------------------------------------------"
+
+chat:
+  format:
+    message: "%player%&7: &f%message%"
+  clear:
+    usage: "&cUsage: /chat clear"
+    message: "&7Chat has been cleared by &e%player%&7."
+  muted:
+    usage: "&cUsage: /chat mute"
+    message: "&7Chat has been &e%boolean% &7by &e%player%&7."
+    message-target: "&cYou cannot speak whilst chat is muted."
+    display-names:
+      muted: "&cmuted"
+      unmuted: "&aunmuted"
+  slow:
+    usage: "&cUsage: /chat slow [delay]"
+    message-slowed: "&7Chat has been &cslowed &7by &e%player% &7with a delay of &e%value% seconds&7."
+    message-unslowed: "&7Chat has been &aunslowed &7by &e%player%&7."
+    message-target: "&cChat is slowed, you can only speak once every %value% seconds."
+    error: "&cChat is already slowed, you must type /chat slow <delay>"
+  help:
+    - "&7&m-------------------------------------------------------"
+    - "&e&lChat Help"
+    - ""
+    - "&e/chat clear &7- &fClear chat."
+    - "&e/chat mute &7- &fToggle chat mute."
+    - "&e/chat slow [delay] &7- &fSlow/unslow chat."
+    - "&7&m-------------------------------------------------------"
+
+general-errors:
+  no-permission: "&cNo permission."
+  player-only: "&cYou can only perform this command in-game."
+  player-not-online: "&cPlayer not online."
+  player-never-joined: "&cThat player has never joined before."
+  rank-not-found: "&cRank not found."
+  rank-already-exists: "&cRank already exists."
+  must-be-an-int: "&cValue must be an integer."
+  must-be-double: "&cValue must be a double."
+  max-number-limit: "&cYou cannot provide a value over 100,000."
